@@ -1,0 +1,16 @@
+/home/towesco/Desktop/Csharp9/bin/Debug/net5.0/Csharp9
+/home/towesco/Desktop/Csharp9/bin/Debug/net5.0/Csharp9.deps.json
+/home/towesco/Desktop/Csharp9/bin/Debug/net5.0/Csharp9.runtimeconfig.json
+/home/towesco/Desktop/Csharp9/bin/Debug/net5.0/Csharp9.runtimeconfig.dev.json
+/home/towesco/Desktop/Csharp9/bin/Debug/net5.0/Csharp9.dll
+/home/towesco/Desktop/Csharp9/bin/Debug/net5.0/ref/Csharp9.dll
+/home/towesco/Desktop/Csharp9/bin/Debug/net5.0/Csharp9.pdb
+/home/towesco/Desktop/Csharp9/obj/Debug/net5.0/Csharp9.csprojAssemblyReference.cache
+/home/towesco/Desktop/Csharp9/obj/Debug/net5.0/Csharp9.GeneratedMSBuildEditorConfig.editorconfig
+/home/towesco/Desktop/Csharp9/obj/Debug/net5.0/Csharp9.AssemblyInfoInputs.cache
+/home/towesco/Desktop/Csharp9/obj/Debug/net5.0/Csharp9.AssemblyInfo.cs
+/home/towesco/Desktop/Csharp9/obj/Debug/net5.0/Csharp9.csproj.CoreCompileInputs.cache
+/home/towesco/Desktop/Csharp9/obj/Debug/net5.0/Csharp9.dll
+/home/towesco/Desktop/Csharp9/obj/Debug/net5.0/ref/Csharp9.dll
+/home/towesco/Desktop/Csharp9/obj/Debug/net5.0/Csharp9.pdb
+/home/towesco/Desktop/Csharp9/obj/Debug/net5.0/Csharp9.genruntimeconfig.cache
