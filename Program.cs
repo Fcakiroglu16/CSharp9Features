@@ -11,10 +11,28 @@ namespace Csharp9
 
             Console.WriteLine("Hello World!");
 
-            //init keyword'ü ile yanlızca object initializer esnasında deger atanabilir. Sonrası için değer atanmaz
+            //Record, compile çıktısı olarak IEquatable<T>’i implemente eden bir sınıfa dönüşmektedir. 
+            //Böylece record üzerinden yaratılacak nesneler aralarında karşılaştırıldıklarında referans olarak değil, 
+            //Data olarak değerlendirilir.
             var product = new Product { Name = "Game", CategoryId = 1 };
-            product.Name="Game2";
-            //product.CategoryId = 10;
+            var product2 = new Product { Name = "Game", CategoryId = 1 };
+
+
+            Console.WriteLine(product.Equals(product2));
+
+            // Yeni copyalar üretme
+            var product3 = product with { CategoryId = 30 };
+
+
+            var employee = new Employee("Fatih", "Çakıroğlu") { Age = 23 };
+            employee.Age = 44;
+            // employee.Name="ahmet" => calişmaz
+
+
+
+
+
+
         }
     }
 }
