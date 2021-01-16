@@ -9,10 +9,14 @@ namespace Csharp9
         static void Main(string[] args)
         {
 
-            Product p = new();
+            // c# 8 'de partial methodlar ile ilgili bazı kısıtlamalar vardı
+            // - partial methodların dönüş tipi mutlaka void olmalı
+            // - partlal methodlar out parametresi dönemez
+            // -  partial methodlar erişim belirleyicisine sahip olamaz
+            
 
-            //var keyword'ü ile new keyword'ü beraber kullanılamaz
-            // var  product= new ();
+            // C# 9.0 tüm bu kısıtlamaları kaldırır.
+
 
         }
 
