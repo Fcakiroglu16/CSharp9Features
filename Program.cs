@@ -9,30 +9,67 @@ namespace Csharp9
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Hello World!");
-
-            //Record, compile çıktısı olarak IEquatable<T>’i implemente eden bir sınıfa dönüşmektedir. 
-            //Böylece record üzerinden yaratılacak nesneler aralarında karşılaştırıldıklarında referans olarak değil, 
-            //Data olarak değerlendirilir.
-            var product = new Product { Name = "Game", CategoryId = 1 };
-            var product2 = new Product { Name = "Game", CategoryId = 1 };
+            Product p = new();
+            p.CategoryId = 25;
+            Console.WriteLine(GetKDV(p));
+            Console.WriteLine(GetKDV2(p));
+            Console.WriteLine(GetKDV3(p));
 
 
-            Console.WriteLine(product.Equals(product2));
-
-            // Yeni copyalar üretme
-            var product3 = product with { CategoryId = 30 };
-
-
-            var employee = new Employee("Fatih", "Çakıroğlu") { Age = 23 };
-            employee.Age = 44;
-            // employee.Name="ahmet" => calişmaz
-
-
-
-
-
+            BookProduct bookProduct = new();
+        
+        Console.WriteLine(GetKDV4(bookProduct));
+        Console.WriteLine(GetKDV5(p));
 
         }
+        //Relational Patterns
+        private static int GetKDV(Product p) => p.CategoryId switch
+        {
+
+            1 => 0,
+            < 5 => 5,
+            > 20 => 15,
+            _ => 2
+        };
+
+
+        //Relational Patterns 2
+        private static int GetKDV2(Product p)
+        {
+            return p.CategoryId switch
+            {
+                1 => 0,
+                < 5 => 5,
+                > 20 => 15,
+                _ => 2
+            };
+
+        }
+        //Logical Patterns
+        private static int GetKDV3(Product p) => p.CategoryId switch
+        {
+
+            0 or 1 => 0,
+            > 1 and < 5 => 5,
+            > 20 => 15,
+            _ => 10
+
+
+        };
+
+
+        //Not Pattern
+        private static int GetKDV4(Product p)
+        {
+            if( p  is not BookProduct)
+            {
+                return 100;
+            }
+            return 0;
+        }
+
+         //Not Pattern 2
+         private static int GetKDV5(Product p) => p is not BookProduct  ? 100 : 0;
+
     }
 }

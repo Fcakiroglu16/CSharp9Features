@@ -1,30 +1,21 @@
 
 //norminal records
-public record Product
+public class Product
 {
 
-    public string Name { get; init; }
-    public int CategoryId { get; init; }
+    public string Name { get; set; }
+    public int CategoryId { get; set; }
 }
 
-//Eski yöntem
-public record Employee2
+public class BookProduct:Product
+{
+    public string    Price { get; set; }
+}
+
+public class  PhoneProduct:Product
 {
 
-    Employee2(string name, string surName) => (Name, SurName) = (name, surName);
-    public string Name { get; init; }
-    public string SurName { get; init; }
-    public int Age { get; init; }
+    public  string Sim { get; set; }
 }
-
-//Yeni yöntem
-//Positional Record
-//Class tanınlarken belirtilen degişkenler otomatik bir şekilde init olur. initializer dışında set edilemezler.
-//Ama  class içerisindeki propery'i degişebilir.
-public record Employee(string Name, string SurName)
-{
-    public int Age { get; set; }
-}
-
 
 
