@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace Csharp9
 {
@@ -9,16 +10,23 @@ namespace Csharp9
         static void Main(string[] args)
         {
 
-            // c# 8 'de partial methodlar ile ilgili bazı kısıtlamalar vardı
-            // - partial methodların dönüş tipi mutlaka void olmalı
-            // - partlal methodlar out parametresi dönemez
-            // -  partial methodlar erişim belirleyicisine sahip olamaz
-            
+            //Eski yöntem
+            // #if DEBUG
+            //             Work();
+            // #endif
 
-            // C# 9.0 tüm bu kısıtlamaları kaldırır.
+Work();
 
 
         }
+
+        
+            [Conditional("DEBUG")]
+            static void Work() => Console.WriteLine("Debug ortamda çalıştı");
+
+
+
+
 
 
     }
