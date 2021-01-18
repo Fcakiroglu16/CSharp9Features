@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "V7qIFGmJ2SEgKM/brlT2rLFF1mXBNVKviieAvISXKs96F/1QO+a/Erh70kDEzeioDR/9fGusG+3HLNqClB0RIw==",
+  "dgSpecHash": "3OKG22QtmbyGBy8txbc0Tnub8h0HlsPJnQU415siiDLFIfEdD4i8CYelsMEvedbmK4Ai8akuGdwZfU9co9ESzw==",
   "success": true,
   "projectFilePath": "D:\\Project Examples\\Csharp9\\Csharp9.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\f-cak\\.nuget\\packages\\system.net.http.json\\5.0.0\\system.net.http.json.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
