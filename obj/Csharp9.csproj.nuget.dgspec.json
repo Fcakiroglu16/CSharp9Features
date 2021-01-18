@@ -1,28 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/home/towesco/Desktop/Csharp9/Csharp9.csproj": {}
+    "D:\\Project Examples\\Csharp9\\Csharp9.csproj": {}
   },
   "projects": {
-    "/home/towesco/Desktop/Csharp9/Csharp9.csproj": {
+    "D:\\Project Examples\\Csharp9\\Csharp9.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/towesco/Desktop/Csharp9/Csharp9.csproj",
+        "projectUniqueName": "D:\\Project Examples\\Csharp9\\Csharp9.csproj",
         "projectName": "Csharp9",
-        "projectPath": "/home/towesco/Desktop/Csharp9/Csharp9.csproj",
-        "packagesPath": "/home/towesco/.nuget/packages/",
-        "outputPath": "/home/towesco/Desktop/Csharp9/obj/",
+        "projectPath": "D:\\Project Examples\\Csharp9\\Csharp9.csproj",
+        "packagesPath": "C:\\Users\\f-cak\\.nuget\\packages\\",
+        "outputPath": "D:\\Project Examples\\Csharp9\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "/home/towesco/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\f-cak\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -55,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.102/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
