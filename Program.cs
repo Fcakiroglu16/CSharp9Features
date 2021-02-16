@@ -6,57 +6,48 @@ using System.Threading.Tasks;
 
 namespace Csharp9
 {
-
+    public enum Rainbow
+    {
+        Red,
+        Orange,
+        Yellow
+    }
+    public class Product
+    {
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+        public int Stock { get; set; }
+    }
 
     class Program
     {
+        public static string FromRainbow(Rainbow colorBand) =>
+            colorBand switch
+            {
+                Rainbow.Red => "kırmızı",
+                Rainbow.Orange => "turuncu",
+                Rainbow.Yellow => "sarı",
+                _ => throw new ArgumentException(message: "invalid enum value", paramName: nameof(colorBand)),
+            };
 
-        static async Task Main(string[] args)
+        public static decimal CalculatePrice(Product product, decimal salePrice)
         {
 
-            // HttpClientJsonExtensions which provides extension methods to send/receive HTTP content as JSON
-            // HttpContentJsonExtensions which provides extension methods to read and then parse the HttpContent from JSON
-            // JsonContent which provides HTTP content based on JSON
-
-            var httpClient = new HttpClient();
-            httpClient.BaseAddress = new Uri("https://jsonplaceholder.typicode.com");
-
-            var getPost = await httpClient.GetFromJsonAsync<Post>("/posts/1");
-
-            Console.WriteLine(getPost);
-            using var postResponse = await httpClient.PostAsJsonAsync("/posts", new Post { Id = 2, Title = "Post 1", userId = 2, Body = "body" });
-
-            Console.WriteLine(postResponse.EnsureSuccessStatusCode());
-
-
-            #region  ReadFromJsonAsync
-            // Get data from JSON HttpContent with ReadFromJsonAsync
-            var request = new HttpRequestMessage(HttpMethod.Get, "/posts/1");
-            using var response1 = await httpClient.SendAsync(request);
-
-            if (response1.IsSuccessStatusCode)
+            return product switch
             {
-                var Post = await response1.Content.ReadFromJsonAsync<Post>();
-
-                Console.WriteLine(Post);
-            }
-
-            #endregion ReadFromJsonAsync
-
-
-
-
-
-            #region  JsonContent.Create
-            // With .NET 5 using JsonContent and SendAsync method instead of PostAsJsonAsync
-            var requestMessage = new HttpRequestMessage(HttpMethod.Post, "/posts")
-            {
-                Content = JsonContent.Create(new Post { userId = 1, Id = 2, Body = "body", Title = "title" })
+                { Stock: 100 } => salePrice * 0.10M,
+                { Stock: 200 } => salePrice * 0.20M,
+                _ => salePrice * 0.1M
             };
-            using var response2 = await httpClient.SendAsync(requestMessage);
-            response2.EnsureSuccessStatusCode();
-            #endregion JsonContent.Create
 
+
+        }
+
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine(FromRainbow(Rainbow.Orange));
+            Console.WriteLine(CalculatePrice(new Product { Name = "Kalem", Price = 100, Stock = 100 }, 1000));
 
         }
 

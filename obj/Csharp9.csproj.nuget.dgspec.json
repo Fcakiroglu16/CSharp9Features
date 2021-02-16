@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Project Examples\\Csharp9\\Csharp9.csproj": {}
+    "D:\\Project Examples\\Csharp9Features\\Csharp9.csproj": {}
   },
   "projects": {
-    "D:\\Project Examples\\Csharp9\\Csharp9.csproj": {
+    "D:\\Project Examples\\Csharp9Features\\Csharp9.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project Examples\\Csharp9\\Csharp9.csproj",
+        "projectUniqueName": "D:\\Project Examples\\Csharp9Features\\Csharp9.csproj",
         "projectName": "Csharp9",
-        "projectPath": "D:\\Project Examples\\Csharp9\\Csharp9.csproj",
+        "projectPath": "D:\\Project Examples\\Csharp9Features\\Csharp9.csproj",
         "packagesPath": "C:\\Users\\f-cak\\.nuget\\packages\\",
-        "outputPath": "D:\\Project Examples\\Csharp9\\obj\\",
+        "outputPath": "D:\\Project Examples\\Csharp9Features\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\f-cak\\AppData\\Roaming\\NuGet\\NuGet.Config",
