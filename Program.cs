@@ -28,15 +28,14 @@ namespace Csharp9
         static void Main(string[] args)
         {
 
-            List<int> numbers = null;
-            int? i = null;
+            var numbers = new int[] { 1, 2, 3, 4, 5, 6 };
 
-            numbers ??= new List<int>();
+            Index index1 = 4; //Index tanımlama
+            Range range2 = 1..3; // Range tanımlama
 
-            numbers.Add(i ??= 14);
-            numbers.Add(i ??= 23);
-
-            Console.WriteLine(string.Join(" ", numbers));
+            var range1 = numbers[1..3];
+            Console.WriteLine(numbers[index1]);
+            Console.WriteLine(String.Join(" ", range1));
 
 
 
