@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
 using System.Net.Http.Json;
@@ -27,11 +28,17 @@ namespace Csharp9
         static void Main(string[] args)
         {
 
-            var consoleWrite = new ConsoleWrite();
+            List<int> numbers = null;
+            int? i = null;
 
-            consoleWrite.WriteTo("c# 8.0 ");
+            numbers ??= new List<int>();
 
-            ((IWrite)consoleWrite).WriteTo2("c# 8.0 c#  8.0");
+            numbers.Add(i ??= 14);
+            numbers.Add(i ??= 23);
+
+            Console.WriteLine(string.Join(" ", numbers));
+
+
 
         }
 
