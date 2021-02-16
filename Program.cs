@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
@@ -28,14 +29,14 @@ namespace Csharp9
         static void Main(string[] args)
         {
 
-            var numbers = new int[] { 1, 2, 3, 4, 5, 6 };
 
-            Index index1 = 4; //Index tanımlama
-            Range range2 = 1..3; // Range tanımlama
+            //ilgili method'un sonuna geldiğinde otomatik olarak dispose eder
+            using var stream = new StreamWriter("examle.txt");
+            stream.WriteLine("c#  8.0");
 
-            var range1 = numbers[1..3];
-            Console.WriteLine(numbers[index1]);
-            Console.WriteLine(String.Join(" ", range1));
+
+
+
 
 
 
